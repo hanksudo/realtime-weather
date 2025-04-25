@@ -38,7 +38,7 @@ If you need to trigger the deployment manually:
 ## Accessing the Deployed Site
 
 After successful deployment, the application will be available at:
-`https://[your-github-username].github.io/vue-login-demo/`
+`https://[your-github-username].github.io/realtime-weather/`
 
 ## Troubleshooting
 

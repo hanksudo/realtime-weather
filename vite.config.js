@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     port: 3000
   },
-  base: '/vue-login-demo/', // GitHub Pages repository name
+  base: '/realtime-weather/', // GitHub Pages repository name
   build: {
     outDir: 'dist'
   }
