@@ -1,13 +1,15 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
-import Login from './components/Login.vue'
-import Dashboard from './components/Dashboard.vue'
+import WeatherDashboard from './components/WeatherDashboard.vue'
+import ForecastView from './components/ForecastView.vue'
+import LocationSearch from './components/LocationSearch.vue'
 
 const routes = [
-  { path: '/', redirect: '/login' },
-  { path: '/login', component: Login },
-  { path: '/dashboard', component: Dashboard }
+  { path: '/', redirect: '/weather' },
+  { path: '/weather', component: WeatherDashboard },
+  { path: '/forecast', component: ForecastView },
+  { path: '/search', component: LocationSearch }
 ]
 
 const router = createRouter({
