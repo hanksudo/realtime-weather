@@ -64,7 +64,7 @@
 import { defineComponent, ref, onMounted, onUnmounted } from 'vue';
 import axios from 'axios';
 import { format } from 'date-fns';
-import { WeatherData } from '@/types';
+import { WeatherData } from '../types';
 
 export default defineComponent({
   name: 'WeatherDashboard',
