@@ -5,6 +5,9 @@ import WeatherDashboard from './components/WeatherDashboard.vue'
 import ForecastView from './components/ForecastView.vue'
 import LocationSearch from './components/LocationSearch.vue'
 
+// Get the base URL from Vite
+const base = import.meta.env.BASE_URL || '/'
+
 const routes = [
   { path: '/', redirect: '/weather' },
   { path: '/weather', component: WeatherDashboard },
@@ -13,7 +16,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(base),
   routes
 })
 
