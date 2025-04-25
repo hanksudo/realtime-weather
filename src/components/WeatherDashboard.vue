@@ -60,22 +60,24 @@
   </div>
 </template>
 
-<script>
-import { ref, onMounted, onUnmounted } from 'vue';
+<script lang="ts">
+import { defineComponent, ref, onMounted, onUnmounted } from 'vue';
 import axios from 'axios';
 import { format } from 'date-fns';
+import { WeatherData } from '@/types';
 
-export default {
+export default defineComponent({
+  name: 'WeatherDashboard',
   setup() {
-    const weather = ref(null);
-    const loading = ref(true);
-    const error = ref(null);
-    const locationName = ref('Loading location...');
-    const currentDate = ref(format(new Date(), 'EEEE, MMMM d, yyyy'));
+    const weather = ref<WeatherData | null>(null);
+    const loading = ref<boolean>(true);
+    const error = ref<string | null>(null);
+    const locationName = ref<string>('Loading location...');
+    const currentDate = ref<string>(format(new Date(), 'EEEE, MMMM d, yyyy'));
     
-    let updateInterval = null;
+    let updateInterval: number | null = null;
 
-    const fetchWeather = async (lat, lon) => {
+    const fetchWeather = async (lat: number, lon: number): Promise<void> => {
       try {
         loading.value = true;
         error.value = null;
@@ -118,7 +120,7 @@ export default {
       }
     };
 
-    const getUserLocation = () => {
+    const getUserLocation = (): void => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
           (position) => {
@@ -136,7 +138,7 @@ export default {
       }
     };
 
-    const refreshWeather = () => {
+    const refreshWeather = (): void => {
       getUserLocation();
     };
 
@@ -144,7 +146,7 @@ export default {
       getUserLocation();
       
       // Set up auto-refresh every 5 minutes
-      updateInterval = setInterval(() => {
+      updateInterval = window.setInterval(() => {
         refreshWeather();
       }, 5 * 60 * 1000);
     });
@@ -164,7 +166,7 @@ export default {
       refreshWeather
     };
   }
-};
+});
 </script>
 
 <style scoped>
