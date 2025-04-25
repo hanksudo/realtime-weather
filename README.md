@@ -1,72 +1,106 @@
-# Realtime Weather Dashboard
+# Realtime Weather
 
-A Vue.js application that displays real-time weather data and forecasts.
-
-![Weather Dashboard](./screenshots/weather-dashboard.svg)
+A real-time weather dashboard application built with Vue.js and TypeScript that displays current conditions and forecasts.
 
 ## Features
 
-- Current weather conditions display
-- Multi-day weather forecast
-- Real-time updates
-- Responsive design for all devices
-- Location-based weather data
-- Intuitive weather visualization
+- Dashboard showing weather for major Japanese cities
+- 5-day weather forecast
+- Responsive design
 
-## Project Setup
+## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14 or higher)
-- [pnpm](https://pnpm.io/) (v6 or higher)
-- Weather API key (from OpenWeatherMap or similar service)
+- Node.js (v18 or higher)
+- pnpm (recommended) or npm
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/hanksudo/realtime-weather.git
-   cd realtime-weather
-   ```
-
-2. Install dependencies:
-   ```bash
-   pnpm install
-   ```
-
-3. Create a `.env` file in the root directory with your API key:
-   ```
-   VITE_WEATHER_API_KEY=your_api_key_here
-   ```
-
-4. Run the development server:
-   ```bash
-   pnpm dev
-   ```
-
-5. Open your browser and navigate to `http://localhost:3000`
-
-## Usage
-
-- The dashboard automatically loads weather data for your current location
-- Use the search bar to look up weather in other locations
-- Toggle between current conditions and forecast views
-- Weather data updates automatically in real-time
-
-## Build for Production
-
 ```bash
-pnpm build
+# Clone the repository
+git clone https://github.com/hanksudo/realtime-weather.git
+cd realtime-weather
+
+# Install dependencies with pnpm (recommended)
+pnpm install
+
+# Or using npm
+npm install
 ```
 
-This will generate a production-ready build in the `dist` directory.
+### Development
 
-## Technologies Used
+```bash
+# Start the development server
+pnpm dev
 
-- Vue.js 3
-- Vue Router
-- Axios for API requests
-- Socket.io for real-time updates
-- date-fns for date formatting
-- Vite
-- pnpm
+# Or using npm
+npm run dev
+```
+
+The application will be available at http://localhost:3000/
+
+### Building for Production
+
+```bash
+# Build for production
+pnpm build
+
+# Or using npm
+npm run build
+```
+
+## Testing
+
+This project uses Vitest for unit testing. Tests are located in `__tests__` directories alongside the components and utilities they test.
+
+```bash
+# Run tests
+pnpm test
+
+# Run tests in watch mode
+pnpm test:watch
+
+# Run tests with coverage
+pnpm test:coverage
+```
+
+## Project Structure
+
+```
+.
+├── public/               # Public static assets
+├── src/                  # Source code
+│   ├── components/       # Vue components
+│   │   └── __tests__/    # Component tests
+│   ├── utils/            # Utility functions
+│   │   └── __tests__/    # Utility tests
+│   ├── types/            # TypeScript type definitions
+│   ├── App.vue           # Root component
+│   └── main.ts           # Application entry point
+├── .github/workflows/    # GitHub Actions workflows
+├── tests/                # Global test setup
+├── .npmrc                # PNPM configuration
+├── pnpm-workspace.yaml   # PNPM workspace configuration
+├── index.html            # HTML entry point
+├── package.json          # Project dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+├── vite.config.ts        # Vite configuration
+└── vitest.config.ts      # Vitest configuration
+```
+
+## Continuous Integration
+
+This project uses GitHub Actions for CI/CD. The pipeline:
+
+1. Runs on push to main and pull requests
+2. Installs dependencies
+3. Performs type checking
+4. Runs tests
+5. Builds the application
+6. Reports test coverage
+
+## License
+
+MIT
