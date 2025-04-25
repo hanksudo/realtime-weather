@@ -13,10 +13,12 @@ import CityForecast from './components/CityForecast.vue'
 // Get the base URL from Vite
 const base = import.meta.env.BASE_URL || '/'
 
+// Define the routes with proper handling of the base URL
 const routes: RouteRecordRaw[] = [
   // New dashboard is now the homepage
   { path: '/', component: CitiesDashboard },
   { path: '/weather', redirect: '/' },
+  // Add a route for /cities that works with the base URL prefix
   { path: '/cities', component: CitiesOverview },
   { 
     path: '/city/:city', 
@@ -47,6 +49,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 
+// Create router with proper history mode using the base URL
 const router = createRouter({
   history: createWebHistory(base),
   routes
