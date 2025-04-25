@@ -2,6 +2,14 @@
 
 A simple login page demo built with Vue.js and pnpm.
 
+## Screenshots
+
+### Login Page
+![Login Screen](./screenshots/login-screen.svg)
+
+### Dashboard
+![Dashboard Screen](./screenshots/dashboard-screen.svg)
+
 ## Features
 
 - Login form with validation
