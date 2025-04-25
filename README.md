@@ -1,6 +1,8 @@
-# Vue.js Login Demo
+# Realtime Weather Dashboard
 
-A simple login page demo built with Vue.js and pnpm.
+A Vue.js application that displays real-time weather data and forecasts.
+
+![Weather Dashboard](./screenshots/weather-dashboard.svg)
 
 ## Screenshots
 
@@ -12,10 +14,12 @@ A simple login page demo built with Vue.js and pnpm.
 
 ## Features
 
-- Login form with validation
-- Simple authentication flow
-- Responsive design
-- Vue Router for navigation
+- Current weather conditions display
+- Multi-day weather forecast
+- Real-time updates
+- Responsive design for all devices
+- Location-based weather data
+- Intuitive weather visualization
 
 ## Project Setup
 
@@ -23,13 +27,14 @@ A simple login page demo built with Vue.js and pnpm.
 
 - [Node.js](https://nodejs.org/) (v14 or higher)
 - [pnpm](https://pnpm.io/) (v6 or higher)
+- Weather API key (from OpenWeatherMap or similar service)
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/hanksudo/vue-login-demo.git
-   cd vue-login-demo
+   git clone https://github.com/hanksudo/realtime-weather.git
+   cd realtime-weather
    ```
 
 2. Install dependencies:
@@ -37,19 +42,24 @@ A simple login page demo built with Vue.js and pnpm.
    pnpm install
    ```
 
-3. Run the development server:
+3. Create a `.env` file in the root directory with your API key:
+   ```
+   VITE_WEATHER_API_KEY=your_api_key_here
+   ```
+
+4. Run the development server:
    ```bash
    pnpm dev
    ```
 
-4. Open your browser and navigate to `http://localhost:3000`
+5. Open your browser and navigate to `http://localhost:3000`
 
 ## Usage
 
-- Navigate to the login page (default route)
-- Use any username with the password "password" to log in
-- After successful login, you'll be redirected to the dashboard
-- Click the logout button to return to the login page
+- The dashboard automatically loads weather data for your current location
+- Use the search bar to look up weather in other locations
+- Toggle between current conditions and forecast views
+- Weather data updates automatically in real-time
 
 ## Build for Production
 
@@ -63,5 +73,8 @@ This will generate a production-ready build in the `dist` directory.
 
 - Vue.js 3
 - Vue Router
+- Axios for API requests
+- Socket.io for real-time updates
+- date-fns for date formatting
 - Vite
 - pnpm
