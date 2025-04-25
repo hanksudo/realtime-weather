@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f0f5ff"/>
+  
+  <!-- Centered Login Card -->
+  <rect x="250" y="120" width="300" height="360" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Header with App Logo -->
+  <rect x="250" y="120" width="300" height="80" rx="10" fill="#2563eb"/>
+  
+  <!-- App Logo -->
+  <circle cx="400" cy="160" r="30" fill="white" opacity="0.9"/>
+  <path d="M385,160 L395,145 L405,160 M390,155 L410,155" stroke="#2563eb" stroke-width="3" fill="none"/>
+  
+  <!-- Login Form -->
+  <text x="320" y="230" font-family="Arial" font-size="22" font-weight="bold" fill="#2d3748">Welcome Back</text>
+  <text x="310" y="255" font-family="Arial" font-size="14" fill="#718096">Sign in to check your weather</text>
+  
+  <!-- Email Input -->
+  <rect x="280" y="275" width="240" height="45" rx="5" fill="#f7fafc" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="290" y="303" font-family="Arial" font-size="14" fill="#a0aec0">Email address</text>
+  
+  <!-- Password Input -->
+  <rect x="280" y="335" width="240" height="45" rx="5" fill="#f7fafc" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="290" y="363" font-family="Arial" font-size="14" fill="#a0aec0">Password</text>
+  <circle cx="495" cy="355" r="10" fill="#f7fafc" stroke="#cbd5e0" stroke-width="1"/>
+  <path d="M492,355 L498,355 M495,352 L495,358" stroke="#a0aec0" stroke-width="1.5"/>
+  
+  <!-- Remember me -->
+  <rect x="280" y="390" width="16" height="16" rx="3" fill="white" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="305" y="403" font-family="Arial" font-size="14" fill="#718096">Remember me</text>
+  
+  <!-- Forgot password -->
+  <text x="410" y="403" font-family="Arial" font-size="14" fill="#2563eb">Forgot password?</text>
+  
+  <!-- Login Button -->
+  <rect x="280" y="420" width="240" height="45" rx="5" fill="#2563eb"/>
+  <text x="380" y="448" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Sign In</text>
+  
+  <!-- Footer -->
+  <text x="330" y="490" font-family="Arial" font-size="14" fill="#718096">New to the app?</text>
+  <text x="435" y="490" font-family="Arial" font-size="14" fill="#2563eb">Sign up</text>
+</svg>
