@@ -2,6 +2,8 @@
 
 A Vue.js application that displays real-time weather data and forecasts.
 
+![Weather Dashboard](./screenshots/weather-dashboard.svg)
+
 ## Features
 
 - Current weather conditions display
