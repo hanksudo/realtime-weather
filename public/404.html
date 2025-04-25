@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // Single Page App redirect script for GitHub Pages
+    // This handles direct navigation to routes when deployed on GitHub Pages
+    (function() {
+      // Parse the URL path
+      const path = window.location.pathname;
+      const pathSegmentsToKeep = 1; // Keep the repository name in path
+
+      // Get repository name from path
+      // This won't work if navigating to domain root, but that's fine for GitHub Pages
+      const repo = path.split('/')[1];
+      localStorage.setItem('originalPath', path.split('/').slice(pathSegmentsToKeep + 1).join('/'));
+      
+      // Redirect to index with original path preserved
+      window.location.href = `/${repo}/`;
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
