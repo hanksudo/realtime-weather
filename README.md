@@ -13,7 +13,7 @@ A real-time weather dashboard application built with Vue.js and TypeScript that 
 ### Prerequisites
 
 - Node.js (v18 or higher)
-- npm or pnpm
+- pnpm (recommended) or npm
 
 ### Installation
 
@@ -22,19 +22,21 @@ A real-time weather dashboard application built with Vue.js and TypeScript that 
 git clone https://github.com/hanksudo/realtime-weather.git
 cd realtime-weather
 
-# Install dependencies
-npm install
-# or
+# Install dependencies with pnpm (recommended)
 pnpm install
+
+# Or using npm
+npm install
 ```
 
 ### Development
 
 ```bash
 # Start the development server
-npm run dev
-# or
 pnpm dev
+
+# Or using npm
+npm run dev
 ```
 
 The application will be available at http://localhost:3000/
@@ -43,9 +45,10 @@ The application will be available at http://localhost:3000/
 
 ```bash
 # Build for production
-npm run build
-# or
 pnpm build
+
+# Or using npm
+npm run build
 ```
 
 ## Testing
@@ -54,13 +57,13 @@ This project uses Vitest for unit testing. Tests are located in `__tests__` dire
 
 ```bash
 # Run tests
-npm test
+pnpm test
 
 # Run tests in watch mode
-npm run test:watch
+pnpm test:watch
 
 # Run tests with coverage
-npm run test:coverage
+pnpm test:coverage
 ```
 
 ## Project Structure
@@ -78,6 +81,8 @@ npm run test:coverage
 │   └── main.ts           # Application entry point
 ├── .github/workflows/    # GitHub Actions workflows
 ├── tests/                # Global test setup
+├── .npmrc                # PNPM configuration
+├── pnpm-workspace.yaml   # PNPM workspace configuration
 ├── index.html            # HTML entry point
 ├── package.json          # Project dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
