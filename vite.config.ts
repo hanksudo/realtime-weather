@@ -16,6 +16,10 @@ export default defineConfig(({ command }) => {
     },
     build: {
       outDir: 'dist'
+    },
+    // Explicitly define the entry point to main.ts
+    optimizeDeps: {
+      entries: ['src/main.ts']
     }
   }
 
