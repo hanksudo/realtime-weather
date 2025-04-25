@@ -24,7 +24,7 @@
           </div>
           <div class="weather-info">
             <img 
-              :src="`http://openweathermap.org/img/wn/${city.weather.weather[0].icon}@2x.png`" 
+              :src="`https://openweathermap.org/img/wn/${city.weather.weather[0].icon}@2x.png`" 
               :alt="city.weather.weather[0].description" 
               class="weather-icon" 
             />
