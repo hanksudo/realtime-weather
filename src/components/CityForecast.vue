@@ -39,7 +39,7 @@
           
           <div class="day-weather">
             <img 
-              :src="`http://openweathermap.org/img/wn/${day.icon}@2x.png`" 
+              :src="`https://openweathermap.org/img/wn/${day.icon}@2x.png`" 
               :alt="day.description" 
               class="weather-icon" 
             />
